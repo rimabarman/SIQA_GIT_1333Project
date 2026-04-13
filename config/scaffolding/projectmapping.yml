@@ -1,0 +1,10 @@
+version: "1.0"
+projectName: SIQA_GIT_1333Project
+runtimes:
+- runtimeAlias: Cloud Designtime
+  assets:
+  - name: Call_refDataFlow
+    type: workflow
+    uid: fl23a19147e74a45c896770d072a2fd7f9
+    stepId: a0
+    reference: project.siqa_git_1333.integrations:Call_refData
