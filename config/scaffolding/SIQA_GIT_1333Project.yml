@@ -22,6 +22,7 @@ packages:
   wpmServer: https://packages.webmethods.io
   wpmRegistry: supported
 - name: WmSalesforceProvider
+  version: 12.0.0.0.17
   wpmServer: https://packages.webmethods.io
   wpmRegistry: licensed
 services:
@@ -95,6 +96,28 @@ services:
     version: 12.0.0.0.17
   - name: WmSalesforceRESTProvider
     version: 12.0.0.0.16
+- serviceName: project.siqa_git_1333.integrations:Copy_Sum
+  packages:
+  - name: SIQA_GIT_1333Project
+    version: "1.0"
+  - name: DADA_ExtendedProperty
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: WmSalesforceProvider
+    version: 12.0.0.0.17
+  - name: WmSalesforceRESTProvider
+    version: 12.0.0.0.16
+- serviceName: pub.math:addInts
+  packages:
+  - name: WmPublic
+    version: 12.1.0.0.810
+- serviceName: pub.flow:debugLog
+  packages:
+  - name: WmPublic
+    version: 12.1.0.0.810
 - serviceName: project.siqa_git_1333.integrations:SIQAAdapterFlow
   packages:
   - name: SIQA_GIT_1333Project
@@ -123,14 +146,6 @@ services:
     version: 12.0.0.0.17
   - name: WmSalesforceRESTProvider
     version: 12.0.0.0.16
-- serviceName: pub.math:addInts
-  packages:
-  - name: WmPublic
-    version: 12.1.0.0.810
-- serviceName: pub.flow:debugLog
-  packages:
-  - name: WmPublic
-    version: 12.1.0.0.810
 - serviceName: project.siqa_git_1333.integrations:Test_ExtendedProperty
   packages:
   - name: SIQA_GIT_1333Project
@@ -191,6 +206,20 @@ services:
     version: 12.0.0.0.17
   - name: WmSalesforceRESTProvider
     version: 12.0.0.0.16
+- serviceName: project.siqa_git_1333.WmSalesforceProvider.com_webmethods_cloudstreams_salesforce_v53.operations.actions:TestSoap
+  packages:
+  - name: SIQA_GIT_1333Project
+    version: "1.0"
+  - name: DADA_ExtendedProperty
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: WmSalesforceProvider
+    version: 12.0.0.0.17
+  - name: WmSalesforceRESTProvider
+    version: 12.0.0.0.16
 - serviceName: project.siqa_git_1333.integrations:deepclonetest
   packages:
   - name: SIQA_GIT_1333Project
@@ -230,6 +259,8 @@ configurationVariables:
   : "10"
   ? cloudstreamsconnection.project..siqa_git_1333..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..connections:SoapAlias.cn.enableCompression
   : "false"
+  ? iscloudstreamsconnectorservice.project..siqa_git_1333..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..operations..actions:TestSoap.virtualServiceName
+  : WmCloudStreams.SoapVS
   ? cloudstreamsconnection.project..siqa_git_1333..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:RestConnAlias.cn.validateAfterInactivity
   : "1000"
   ? cloudstreamsconnection.project..siqa_git_1333..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..connections:SoapAlias.cn.retryIfRequestSentOk
@@ -462,6 +493,8 @@ configurationVariables:
   : refresh_token
   ? cloudstreamsconnection.project..siqa_git_1333..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:RestAlias.oauth.consumerSecret
   : "{AES}H3DUtu7FPRrFm9VYcSfJnS3lCjio/Y0dcYLG0xJfNKLdKR+a9WILwQTFauAGCQLJq9tT9MRnltJ6j2bw1Uxhv2mK1wuN3U1rA1B0VhuZoUw="
+  ? iscloudstreamsconnectorservice.project..siqa_git_1333..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..operations..actions:TestSoap.connectionAlias
+  : project.siqa_git_1333.WmSalesforceProvider.com_webmethods_cloudstreams_salesforce_v53.connections:SoapAlias
   ? artConnection.SIQA_GIT_1333Project.project.siqa_git_1333.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.datasourceClass
   : com.mysql.cj.jdbc.MysqlDataSource
   ? artConnection.SIQA_GIT_1333Project.project.siqa_git_1333.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.password
